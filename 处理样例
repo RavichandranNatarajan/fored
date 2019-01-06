@@ -1,0 +1,17 @@
+// vim: syntax=Python
+drop_columns=['key','pickup_datetime','pickup_date','pickup_latitude_round3','pickup_longitude_round3','dropoff_latitude_round3','dropoff_longitude_round3']
+train_1=train.drop(drop_columns,axis=1)
+test_1=test.drop(drop_columns,axis=1)
+print("Shape of Training Data after dropping columns",train_1.shape)
+print("Shape of Testing Data after dropping columns",test_1.shape)
+train_1=pd.get_dummies(train_1)
+test_1=pd.get_dummies(test_1)
+print("Shape of Training Data after One Hot Encoding",train_1.shape)
+print("Shape of Testing Data after One Hot Encoding",test_1.shape)
+X=train_1.drop(['fare_amount'],axis=1)
+y=train_1['fare_amount']
+lm = LinearRegression()
+lm.fit(X_train,y_train)
+y_pred=lm.predict(X_test)
+lm_rmse=np.sqrt(mean_squared_error(y_pred, y_test))
+print("RMSE for Linear Regression is ",lm_rmse)
