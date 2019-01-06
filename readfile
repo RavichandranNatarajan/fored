@@ -1,4 +1,4 @@
-// vim: syntax=<python>
+// vim: syntax=python
 input_path='../input/eda-and-feature-engineering//'
 train=pd.read_csv(input_path+'train_cleaned.csv')
 test=pd.read_csv(input_path+'test_cleaned.csv')
