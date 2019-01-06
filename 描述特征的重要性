@@ -1,0 +1,4 @@
+// vim: syntax=Python
+lgbm_feature_importance=sorted(zip(map(lambda x: round(x, 4),clf.feature_importances_), X_train.columns),reverse=True)
+plt.figure(figsize=(10,15))
+sns.barplot([imp for imp,feature in lgbm_feature_importance],[feature for imp,feature in lgbm_feature_importance])
