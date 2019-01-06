@@ -1,0 +1,6 @@
+input_path='../input/eda-and-feature-engineering//'
+train=pd.read_csv(input_path+'train_cleaned.csv')
+test=pd.read_csv(input_path+'test_cleaned.csv')
+train=pd.read_csv("all/train.csv",nrows=3000000)##
+print("Shape of Training Data ",train.shape)
+print("Shape of Testing Data ",test.shape)
