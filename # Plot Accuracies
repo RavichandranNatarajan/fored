@@ -1,0 +1,9 @@
+// vim: syntax=Python
+# Plot Accuracies
+plt.figure(figsize = (6,6))
+
+plt.plot(t, np.array(train_acc), 'r-', t[t % 10 == 0], validation_acc, 'b*')
+plt.xlabel("iteration")
+plt.ylabel("Accuray")
+plt.legend(['train', 'validation'], loc='upper right')
+plt.show()
