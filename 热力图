@@ -1,0 +1,11 @@
+// vim: syntax=Python
+city_long_border = (-74.03, -73.75)
+city_lat_border = (40.63, 40.85)
+
+train.plot(kind='scatter', x='dropoff_longitude', y='dropoff_latitude',
+                color='green', 
+                s=.02, alpha=.6)
+plt.title("Dropoffs")
+
+plt.ylim(city_lat_border)
+plt.xlim(city_long_border)
